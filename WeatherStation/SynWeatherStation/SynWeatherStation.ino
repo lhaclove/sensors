@@ -68,7 +68,7 @@ void loop() {
   postData = "status=" + ADCData + "&station=" + station ;
   //Post Data Humidity
  //---------------------------------------------------------------------------------------------------
-  String req_humidity = "http://13.53.149.166:8000/20Node_MCU19?id=";
+  String req_humidity = "http://13.53.149.166:8000/set?id=";
   req_humidity+="2&value=";
   req_humidity+=humidity;
   http.begin(req_humidity);              //Specify request destination
@@ -80,7 +80,7 @@ void loop() {
   http.end();
   delay(100);
   //--------------------------------------------------------------------------------------------------
-   String req_temperature = "http://13.53.149.166:8000/20Node_MCU19?id=";
+   String req_temperature = "http://13.53.149.166:8000/set?id=";
   req_temperature+="1&value=";
   req_temperature+=temperature;
   http.begin(req_temperature);              //Specify request destination
@@ -92,7 +92,7 @@ void loop() {
   http.end();
   delay(100);
    //--------------------------------------------------------------------------------------------------
-  String req_pressure = "http://13.53.149.166:8000/20Node_MCU19?id=";
+  String req_pressure = "http://13.53.149.166:8000/set?id=";
   req_pressure+="3&value=";
   req_pressure+=pressure;
   http.begin(req_pressure);              //Specify request destination
@@ -104,7 +104,7 @@ void loop() {
   http.end();
   delay(100);
     //--------------------------------------------------------------------------------------------------
-      String req_altitude = "http://13.53.149.166:8000/20Node_MCU19?id=";
+      String req_altitude = "http://13.53.149.166:8000/set?id=";
   req_altitude+="4&value=";
   req_altitude+=altitude;
   http.begin(req_altitude);              //Specify request destination
